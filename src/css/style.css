@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: candara;
+}
+:root {
+  --transition: all 0.5s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+p,
+a,
+ul,
+li,
+input,
+button {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
+}
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: var(--transition);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+}
+input {
+  border: 1px solid #eee;
+  outline: none;
+  padding: 5px 10px;
+}
+input[type="range"] {
+  border: none;
+}
+.carousel-container {
+  width: 100%;
+  height: calc(100vh - 56px);
+  overflow: hidden;
+  position: relative;
+}
+.carousel-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transition);
+}
+.carousel-container .leftarrow,
+.carousel-container .rightarrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+}
+.carousel-container .leftarrow {
+  left: 10px;
+}
+.carousel-container .rightarrow {
+  right: 10px;
+}
+.about img {
+  width: 250px;
+  height: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.product-container .product {
+  width: 100%;
+  min-height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.product-container .product .img {
+  width: 100%;
+  height: 250px;
+}
+.product-container .product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.table {
+  min-width: 600px;
+}
+.SVGdisable {
+  pointer-events: none;
+  user-select: none;
+}
+.searchfilter {
+  min-width: 280px;
+  width: 25%;
+  min-height: 100vh;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  z-index: 11;
+  overflow-y: auto;
+  transition: var(--transition);
+}
+.searchfilter.active {
+  right: 0;
+}
+.searchfilter label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.searchfilter::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+.arrow {
+  transition: var(--transition);
+}
+.arrow.rotate_arrow {
+  transform: rotate(180deg);
+}
