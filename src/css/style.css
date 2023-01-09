@@ -150,3 +150,6 @@ body::-webkit-scrollbar {
 .arrow.rotate_arrow {
   transform: rotate(180deg);
 }
+.no-pointer {
+  pointer-events: none;
+}

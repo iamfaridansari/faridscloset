@@ -196,8 +196,8 @@ const SearchFilter = () => {
             data-arrow="brand_collapse"
             onClick={(e) => rotateArrow(e)}
           >
-            <p className="fw-bold">Brand</p>
-            <div className="arrow" data-arrow="brand_collapse">
+            <p className="fw-bold no-pointer">Brand</p>
+            <div className="arrow no-pointer" data-arrow="brand_collapse">
               <IoIosArrowDown />
             </div>
           </div>
@@ -233,8 +233,8 @@ const SearchFilter = () => {
             data-arrow="category_collapse"
             onClick={(e) => rotateArrow(e)}
           >
-            <p className="fw-bold">Category</p>
-            <div className="arrow" data-arrow="category_collapse">
+            <p className="fw-bold no-pointer">Category</p>
+            <div className="arrow no-pointer" data-arrow="category_collapse">
               <IoIosArrowDown />
             </div>
           </div>
