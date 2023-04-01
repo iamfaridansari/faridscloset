@@ -10,18 +10,19 @@ const About = () => {
             <img src={profile_pic} alt="" />
           </div>
           <div className="order-md-1 text-md-start text-center">
-            <h1>Lorem ipsum dolor sit.</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Exercitationem, consequuntur?
+            <h1>About Farid's Closet.</h1>
+            <p className="my-2">
+              Farid's closet is an Ecommerec web application, design & built by
+              Farid Ansari.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              qui cumque at officia, nisi eveniet reprehenderit blanditiis
-              architecto aperiam, odit quod maiores facere a. Maxime dolores
-              officia sapiente nostrum at voluptates cum commodi porro hic
-              nesciunt, ab pariatur culpa delectus cupiditate fuga adipisci quo.
-              Error at mollitia commodi tempora corrupti!
+              I always wanted my wardrobe to be minimal and perfect. Basic solid
+              tshirts, a good pair of denim jeans, some cargo's, never out of
+              style shoes, formals, trendy accessories and many more cool
+              costumes. Unfortunately, life isn't perfect to give me all of
+              these outfits, so I tried to make my own imaginary wardrobe and be
+              happy with it. I hope some day I will be furtunate enough to have
+              my dream wardrobe in real life.
             </p>
           </div>
         </div>

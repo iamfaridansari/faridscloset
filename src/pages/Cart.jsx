@@ -45,7 +45,7 @@ const Cart = () => {
   };
   return (
     <>
-      <div className="container" style={{ overflowX: "auto" }}>
+      <div className="container py-2" style={{ overflowX: "auto" }}>
         {cart.length === 0 ? (
           <p className="text-center my-4">No item in the cart.</p>
         ) : (

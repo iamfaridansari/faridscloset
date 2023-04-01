@@ -56,9 +56,6 @@ const SearchFilter = () => {
     }
   };
   const [sort, setSort] = useState("");
-  const addSort = (e) => {
-    setSort(e.target.dataset.type);
-  };
   //
   const applyFilter = () => {
     let updated = productsData;

@@ -25,11 +25,9 @@ const Summary = () => {
         <div className="col-lg-4 col-md-6 col-sm-8">
           <ul className="list-group">
             <li className="list-group-item">
-              Total items: {summary.total_items}
+              Total quantity: {summary.total_items}
             </li>
-            <li className="list-group-item">
-              Total unique items: {cart.length}
-            </li>
+            <li className="list-group-item">Total items: {cart.length}</li>
             <li className="list-group-item">
               Subtotal: Rs. <strong>{summary.subtotal}</strong>
             </li>

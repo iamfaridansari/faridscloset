@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "./css/style.css";
 import "./css/responsive.css";
 //
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 //
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -24,16 +24,14 @@ const App = () => {
     <CartContextProvider>
       <WishlistContextProvider>
         <ProductContextProvider>
-          <Router>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/wishlist" element={<Wishlist />} />
-              <Route path="/cart" element={<Cart />} />
-            </Routes>
-            <Footer />
-          </Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          <Footer />
         </ProductContextProvider>
       </WishlistContextProvider>
     </CartContextProvider>
