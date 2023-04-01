@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1b0ded9b.css",
+    "main.js": "/static/js/main.9a764446.js",
+    "static/media/banner3.jpg": "/static/media/banner3.e5527c6e5ce976558cd2.jpg",
+    "static/media/banner5.jpg": "/static/media/banner5.264b17b111ed0b6e55e3.jpg",
+    "static/media/banner1.jpg": "/static/media/banner1.6876d1fa80252331fd1a.jpg",
+    "static/media/banner2.jpg": "/static/media/banner2.681b50dc478a1fb3bd66.jpg",
+    "static/media/profile_pic.jpg": "/static/media/profile_pic.e2746b39ba3c4c0df5ec.jpg",
+    "static/media/banner4.jpg": "/static/media/banner4.994506e631cf2d225d4c.jpg",
+    "static/media/black_converse.jpg": "/static/media/black_converse.118210140f5c4c73b9ca.jpg",
+    "static/media/football_flats.jpg": "/static/media/football_flats.f17fd5daac4378a526af.jpg",
+    "static/media/Adidas_sports_jacket.jpg": "/static/media/Adidas_sports_jacket.1e2c46fa35acff4728fa.jpg",
+    "static/media/Camflouge_cargo.jpg": "/static/media/Camflouge_cargo.cb5bbda91fe6d950929d.jpg",
+    "static/media/Adidas_shorts.jpg": "/static/media/Adidas_shorts.d8eff47e64bd448b5230.jpg",
+    "static/media/Black_scarf.jpg": "/static/media/Black_scarf.29edbd787cbf28343cfe.jpg",
+    "static/media/Black_formal_shirt.jpg": "/static/media/Black_formal_shirt.6216336d6561c86f61c9.jpg",
+    "static/media/black_hoodie.jpg": "/static/media/black_hoodie.1a0ef13553050ca692a4.jpg",
+    "static/media/football_studs.jpg": "/static/media/football_studs.8f8125827274e5490bc3.jpg",
+    "static/media/Black_jeans.jpg": "/static/media/Black_jeans.2cec2cec3d6aaed0670c.jpg",
+    "static/media/Black_blazer.jpg": "/static/media/Black_blazer.fb3d505d0f6a35683fdc.jpg",
+    "static/media/new_balance_550.jpg": "/static/media/new_balance_550.12360c406489be2d0577.jpg",
+    "static/media/black_pant.jpg": "/static/media/black_pant.9abe40fabece17d05eb2.jpg",
+    "static/media/Adidas_trackpant.jpg": "/static/media/Adidas_trackpant.8ea0bfe7f8d1f15468be.jpg",
+    "static/media/Black_ring.jpg": "/static/media/Black_ring.7995d4d7529b9bcbad62.jpg",
+    "static/media/Black_cap.jpg": "/static/media/Black_cap.36506eaaee14bc6bbf0a.jpg",
+    "static/media/Belt.jpg": "/static/media/Belt.dfb7e888bd665cc88e87.jpg",
+    "static/media/Black_cargo.jpg": "/static/media/Black_cargo.16e200c80828c093d8aa.jpg",
+    "index.html": "/index.html",
+    "main.1b0ded9b.css.map": "/static/css/main.1b0ded9b.css.map",
+    "main.9a764446.js.map": "/static/js/main.9a764446.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b0ded9b.css",
+    "static/js/main.9a764446.js"
+  ]
+}
