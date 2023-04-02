@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/faridscloset/static/css/main.1b0ded9b.css",
-    "main.js": "/faridscloset/static/js/main.980e4693.js",
+    "main.js": "/faridscloset/static/js/main.5b5865fc.js",
     "static/media/banner3.jpg": "/faridscloset/static/media/banner3.e5527c6e5ce976558cd2.jpg",
     "static/media/banner5.jpg": "/faridscloset/static/media/banner5.264b17b111ed0b6e55e3.jpg",
     "static/media/banner1.jpg": "/faridscloset/static/media/banner1.6876d1fa80252331fd1a.jpg",
@@ -28,10 +28,10 @@
     "static/media/Black_cargo.jpg": "/faridscloset/static/media/Black_cargo.16e200c80828c093d8aa.jpg",
     "index.html": "/faridscloset/index.html",
     "main.1b0ded9b.css.map": "/faridscloset/static/css/main.1b0ded9b.css.map",
-    "main.980e4693.js.map": "/faridscloset/static/js/main.980e4693.js.map"
+    "main.5b5865fc.js.map": "/faridscloset/static/js/main.5b5865fc.js.map"
   },
   "entrypoints": [
     "static/css/main.1b0ded9b.css",
-    "static/js/main.980e4693.js"
+    "static/js/main.5b5865fc.js"
   ]
 }
