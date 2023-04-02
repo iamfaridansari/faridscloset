@@ -53,12 +53,18 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/wishlist">
-                Wishlist [{wishlist.length}]
+                Wishlist{" "}
+                <span className="badge bg-dark">
+                  <p>{wishlist.length}</p>
+                </span>
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/cart">
-                Cart [{cart.length}]
+                Cart{" "}
+                <span className="badge bg-dark">
+                  <p>{cart.length}</p>
+                </span>
               </NavLink>
             </li>
           </ul>
