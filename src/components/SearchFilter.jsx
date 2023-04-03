@@ -2,12 +2,11 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaFilter, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { ProductContext } from "../context/ProductContext";
-import productsData from "../data/productsData";
 //
-import { brandList, categoryList } from "../data/searchfilter";
+import { brand, category } from "../data/searchfilter";
 
 const SearchFilter = () => {
-  const { products, setProducts } = useContext(ProductContext);
+  const { products, newProducts, setNewProducts } = useContext(ProductContext);
   const searchfilter = useRef(null);
   const [toggle, setToggle] = useState(false);
   const toggleSearchFilter = () => {
@@ -28,12 +27,12 @@ const SearchFilter = () => {
         return item === brand;
       });
       if (!brandExist) {
-        setBrands([...brands, brand]);
+        setBrands([...brands, brand.replace(/\s/g, "")]);
       }
     }
     if (!e.target.checked) {
       const filtered = brands.filter((item) => {
-        return item !== brand;
+        return item !== brand.replace(/\s/g, "");
       });
       setBrands(filtered);
     }
@@ -45,26 +44,25 @@ const SearchFilter = () => {
         return item === category;
       });
       if (!categoryExist) {
-        setCategories([...categories, category]);
+        setCategories([...categories, category.replace(/\s/g, "")]);
       }
     }
     if (!e.target.checked) {
       const filtered = categories.filter((item) => {
-        return item !== category;
+        return item !== category.replace(/\s/g, "");
       });
       setCategories(filtered);
     }
   };
-  const [sort, setSort] = useState("");
   //
   const applyFilter = () => {
-    let updated = productsData;
+    let updated = products;
     //
     if (search !== "") {
       updated = updated.filter((item) => {
         return (
           item.brand.toLowerCase().includes(search.toLowerCase()) ||
-          item.title.toLowerCase().includes(search.toLowerCase())
+          item.name.toLowerCase().includes(search.toLowerCase())
         );
       });
     }
@@ -87,11 +85,11 @@ const SearchFilter = () => {
       });
     }
     //
-    setProducts(updated);
+    setNewProducts(updated);
   };
   useEffect(() => {
     applyFilter();
-  }, [search, sort, range, brands, categories]);
+  }, [search, range, brands, categories]);
   //
   //
   // clear filters
@@ -147,7 +145,10 @@ const SearchFilter = () => {
           </button>
         </div>
         {/*  */}
-        <p className="mt-4">Showing {products.length} products</p>
+        <p className="mt-4">
+          Showing {newProducts.length}{" "}
+          {newProducts.length <= 1 ? "product" : "products"}
+        </p>
         {/*  */}
         <div className="mt-4">
           <div>
@@ -155,7 +156,7 @@ const SearchFilter = () => {
               <input
                 type="range"
                 min="0"
-                max="2000"
+                max="5000"
                 className="form-range"
                 id="price-range"
                 value={range}
@@ -171,7 +172,7 @@ const SearchFilter = () => {
               </p>
               {range === 0 ? (
                 <p>
-                  Rs.<strong>2000</strong>
+                  Rs.<strong>5000</strong>
                 </p>
               ) : (
                 <p>
@@ -199,18 +200,18 @@ const SearchFilter = () => {
             </div>
           </div>
           <div className="collapse" id="brand_collapse">
-            {brandList.map((item, index) => {
+            {brand.map((item, index) => {
               return (
                 <div
                   className="d-flex align-items-center justify-content-between"
                   key={index}
                 >
                   <label className="text-capitalize">
-                    {item.name}
+                    {item}
                     <input
                       type="checkbox"
-                      name={item.name}
-                      onClick={(e) => addBrand(e, item.name)}
+                      name={item.replace(/\s/g, "")}
+                      onClick={(e) => addBrand(e, item)}
                     />
                   </label>
                 </div>
@@ -236,18 +237,18 @@ const SearchFilter = () => {
             </div>
           </div>
           <div className="collapse" id="category_collapse">
-            {categoryList.map((item, index) => {
+            {category.map((item, index) => {
               return (
                 <div
                   className="d-flex align-items-center justify-content-between"
                   key={index}
                 >
                   <label className="text-capitalize">
-                    {item.name}
+                    {item}
                     <input
                       type="checkbox"
-                      name={item.name}
-                      onClick={(e) => addCategory(e, item.name)}
+                      name={item.replace(/\s/g, "")}
+                      onClick={(e) => addCategory(e, item)}
                     />
                   </label>
                 </div>

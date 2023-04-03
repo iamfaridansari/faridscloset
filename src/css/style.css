@@ -140,10 +140,6 @@ input[type="range"] {
   justify-content: space-between;
   width: 100%;
 }
-.searchfilter::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
-}
 .arrow {
   transition: var(--transition);
 }

@@ -8,14 +8,14 @@ const Cart = () => {
   //
   const removeItem = (product) => {
     const filtered = cart.filter((item) => {
-      return item.id !== product.id;
+      return item._id !== product._id;
     });
     setCart(filtered);
   };
   //
   const increment = (product) => {
     const updatedQuantity = cart.map((item) => {
-      if (item.id === product.id) {
+      if (item._id === product._id) {
         return {
           ...item,
           quantity: item.quantity + 1,
@@ -29,7 +29,7 @@ const Cart = () => {
   //
   const decrement = (product) => {
     const updatedQuantity = cart.map((item) => {
-      if (item.id === product.id && item.quantity > 0) {
+      if (item._id === product._id && item.quantity > 0) {
         return {
           ...item,
           quantity: item.quantity - 1,
@@ -65,7 +65,7 @@ const Cart = () => {
                 return (
                   <tr key={index}>
                     <td>{index + 1}</td>
-                    <td className="text-capitalize">{item.title}</td>
+                    <td className="text-capitalize">{item.name}</td>
                     <td>
                       Rs. <strong>{item.price}</strong>
                     </td>

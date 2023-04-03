@@ -1,43 +1,45 @@
-export const brandList = [
-  {
-    name: "adidas",
-  },
-  {
-    name: "h&m",
-  },
-  {
-    name: "zara",
-  },
-  {
-    name: "converse",
-  },
-  {
-    name: "woodland",
-  },
+export const color = [
+  "white",
+  "black",
+  "camflouge",
+  "beige",
+  "olive green",
+  "grey",
+  "red",
+  "blue",
+  "green",
+  "silver",
 ];
-export const categoryList = [
-  {
-    name: "tracksuit",
-  },
-  {
-    name: "tshirt",
-  },
-  {
-    name: "accessories",
-  },
-  {
-    name: "trouser",
-  },
-  {
-    name: "suit",
-  },
-  {
-    name: "shirt",
-  },
-  {
-    name: "hoodie",
-  },
-  {
-    name: "shoes",
-  },
+
+export const brand = [
+  "h&m",
+  "zara",
+  "adidas",
+  "hublot",
+  "nike",
+  "carhartt",
+  "new balance",
+  "converse",
+  "ssense",
+  "jack & jones",
+  "decathlon",
+  "levis",
+  "dickies",
+  "jockey",
+];
+
+export const category = [
+  "tshirt",
+  "shirt",
+  "accessories",
+  "shoes",
+  "cargo",
+  "jeans",
+  "formals",
+  "tracksuit",
+  "innerwear",
+  "hoodie",
+  "sweatshirt",
+  "jacket",
+  "flipflop",
 ];

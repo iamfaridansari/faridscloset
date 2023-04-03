@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
 import ProductCard from "./ProductCard";
-import productsData from "../data/productsData";
 
 const Feature = () => {
+  const { newProducts } = useContext(ProductContext);
   return (
     <div className="container">
       <h1 className="text-center mb-4">Our best sellers</h1>
       <div className="product-container">
-        {productsData.map((item, index) => {
-          if (item.feature) {
-            return <ProductCard key={index} product={item} />;
-          }
+        {newProducts.slice(0, 4).map((item, index) => {
+          return <ProductCard key={index} product={item} />;
         })}
       </div>
     </div>

@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
     useContext(ProductContext);
   const addToCart = (product) => {
     let inCart = cart.find((item) => {
-      return item.id === product.id;
+      return item._id === product._id;
     });
     if (!inCart) {
       product = {
@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
       hideAlertModal();
     } else if (inCart) {
       const updateQuantity = cart.map((item) => {
-        if (item.id === product.id) {
+        if (item._id === product._id) {
           return {
             ...item,
             quantity: item.quantity + 1,
@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
   //
   const addToWishlist = (product) => {
     const inWishlist = wishlist.find((item) => {
-      return item.id === product.id;
+      return item._id === product._id;
     });
     if (!inWishlist) {
       setWishlist([...wishlist, product]);
@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
       hideAlertModal();
     } else {
       const filtered = wishlist.filter((item) => {
-        return item.id !== product.id;
+        return item._id !== product._id;
       });
       setWishlist(filtered);
       setAlertMsg("Item removed from wishlist");
@@ -70,10 +70,10 @@ const ProductCard = ({ product }) => {
     <>
       <div className="product">
         <div className="img">
-          <img src={product.img} alt="" />
+          <img src={`http://localhost:3001/${product.image}`} alt="" />
         </div>
         <div className="my-2">
-          <p className="text-capitalize">{product.title}</p>
+          <p className="text-capitalize">{product.name}</p>
           <p>
             Rs. <strong>{product.price}</strong>
           </p>
