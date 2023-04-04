@@ -4,7 +4,7 @@ const ProductContext = createContext();
 const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const fetchProducts = async () => {
-    const res = await fetch("/getfaridsclosetproducts");
+    const res = await fetch("/api/get/faridscloset/products");
     const data = await res.json();
     console.log(data);
     //
