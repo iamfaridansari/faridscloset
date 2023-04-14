@@ -18,6 +18,10 @@ import Footer from "./components/Footer";
 import { CartContextProvider } from "./context/CartContext";
 import { WishlistContextProvider } from "./context/WishlistContext";
 import { ProductContextProvider } from "./context/ProductContext";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -30,6 +34,11 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+
+            <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
         </ProductContextProvider>

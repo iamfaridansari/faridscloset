@@ -3,15 +3,18 @@ import { ProductContext } from "../context/ProductContext";
 import AlertModal from "../components/AlertModal";
 import ProductCard from "../components/ProductCard";
 import SearchFilter from "../components/SearchFilter";
+import Loader from "../components/Loader";
 
 const Products = () => {
-  const { newProducts } = useContext(ProductContext);
+  const { newProducts, loading } = useContext(ProductContext);
   return (
     <>
       <SearchFilter />
       <AlertModal />
       <div className="container mt-4">
-        {newProducts.length === 0 ? (
+        {loading ? (
+          <Loader />
+        ) : newProducts.length === 0 ? (
           <p className="text-center my-4">No product to show.</p>
         ) : (
           <div className="product-container">

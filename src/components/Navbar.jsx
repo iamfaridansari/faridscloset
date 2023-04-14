@@ -53,18 +53,19 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/wishlist">
-                Wishlist{" "}
-                <span className="badge bg-dark">
-                  <p>{wishlist.length}</p>
-                </span>
+                Wishlist
+                <span className="badge bg-dark ms-1">{wishlist.length}</span>
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/cart">
-                Cart{" "}
-                <span className="badge bg-dark">
-                  <p>{cart.length}</p>
-                </span>
+                Cart
+                <span className="badge bg-dark ms-1">{cart.length}</span>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/profile">
+                Profile
               </NavLink>
             </li>
           </ul>

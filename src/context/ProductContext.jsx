@@ -4,13 +4,22 @@ const ProductContext = createContext();
 const ProductContextProvider = ({ children }) => {
   const backendAPI = "https://server-application.onrender.com";
   const [products, setProducts] = useState([]);
+  const [feature, setFeature] = useState([]);
+  const [loading, setLoading] = useState(false);
   const fetchProducts = async () => {
-    const res = await fetch(backendAPI + "/api/get/faridscloset/products");
-    const data = await res.json();
-    console.log(data);
-    //
-    if (res.status === 200) {
-      setProducts(data);
+    try {
+      setLoading(true);
+      const res = await fetch(backendAPI + "/api/get/faridscloset/products");
+      const data = await res.json();
+      console.log(data);
+      //
+      if (res.status === 200) {
+        setProducts(data);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
     }
   };
   //
@@ -37,6 +46,7 @@ const ProductContextProvider = ({ children }) => {
   useEffect(() => {
     if (products.length !== 0) {
       setNewProducts(rearrange(products));
+      setFeature(products.slice(0, 4));
     }
   }, [products]);
 
@@ -60,6 +70,8 @@ const ProductContextProvider = ({ children }) => {
         alertMsg,
         setAlertMsg,
         backendAPI,
+        loading,
+        feature,
       }}
     >
       {children}
